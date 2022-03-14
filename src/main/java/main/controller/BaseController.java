@@ -15,7 +15,7 @@ public class BaseController {
     @Autowired
     UserService userService;
 
-    public final User getUser() {
+    public final User getUser(String username) {
         try {
             Authentication auth = SecurityContextHolder.getContext().getAuthentication();
             if (auth != null) {
@@ -30,8 +30,8 @@ public class BaseController {
     }
 
     @ModelAttribute("userLogin")
-    public User userLogin() {
-        return this.getUser();
+    public User userLogin(String username) {
+        return this.getUser(username);
     }
 
     @ModelAttribute("version")

@@ -14,7 +14,7 @@ public class UserBeans {
     }
 
     public UserBeans(User user) {
-        this.displayName = user.getName();
+        this.displayName = "Admin";
         this.password = user.getPassword();
         this.username = user.getUserName();
         this.id = user.getId();

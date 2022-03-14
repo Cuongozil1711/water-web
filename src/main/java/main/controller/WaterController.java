@@ -27,7 +27,7 @@ public class WaterController extends BaseController{
 	public ModelAndView view(HttpServletRequest request, Model model) {
 		HttpSession session = request.getSession();
 		session.setAttribute("pageActive", CommonConst.COMMON_PAGE.WATER);
-		session.setAttribute("nameUser", getUser().getName());
+		session.setAttribute("nameUser", "Admin");
 		return new ModelAndView("water");
 	}
 
@@ -36,7 +36,7 @@ public class WaterController extends BaseController{
 	public ModelAndView view2(HttpServletRequest request, Model model) {
 		HttpSession session = request.getSession();
 		session.setAttribute("pageActive", CommonConst.COMMON_PAGE.WATER1);
-		session.setAttribute("nameUser", getUser().getName());
+		session.setAttribute("nameUser", "Admin");
 		return new ModelAndView("water1");
 	}
 

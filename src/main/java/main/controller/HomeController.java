@@ -23,6 +23,7 @@ public class HomeController extends BaseController{
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public ModelAndView homeView(HttpServletRequest request) {
+
         return new ModelAndView("redirect:/water");
     }
 
